@@ -1,0 +1,5 @@
+main: david.forspigot.XFirewall
+name: X-Firewall
+version: 1.0
+authors: [RTGOHARDG, zombie_striker]
+description: Not an actual firewall
