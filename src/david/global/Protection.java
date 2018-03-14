@@ -2,6 +2,7 @@ package david.global;
 
 import david.forspigot.XFirewall;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.scheduler.BukkitTask;
 
 import java.time.Instant;
@@ -33,6 +34,7 @@ public class Protection {
     }
 
     private void start() {
+        System.out.println(ChatColor.RED + "ALERT ALERT PROTECTION STARTED!");
         if (states == States.DISABLED) {
             return;
         }
@@ -49,6 +51,8 @@ public class Protection {
     }
 
     private void stop() {
+        System.out.println(ChatColor.RED + "ALERT ALERT PROTECTION STOPPED!");
+
         if (states != States.ACTIVE) {
         }
 
@@ -68,6 +72,7 @@ public class Protection {
 
 
     public boolean check() {
+        System.out.println(ChatColor.RED + "ALERT ALERT PROTECTION CHECK!");
         if (states == States.DISABLED) {
             return false;
         }
@@ -77,7 +82,7 @@ public class Protection {
         if (lastFlagged == null) {
             lastFlagged = Instant.now();
         }
-        if (ChronoUnit.SECONDS.between(lastFlagged, Instant.now()) <= xFirewall.getSettings().getProtectionInteral()) {
+        if (ChronoUnit.SECONDS.between(lastFlagged, Instant.now()) <= xFirewall.getSettings().getProtectionInterval()) {
             flaggedConnections++;
         } else {
             flaggedConnections = 1;

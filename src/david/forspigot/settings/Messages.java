@@ -24,16 +24,11 @@ public class Messages {
     /**
      * %player%
      * %player_ip%
-     * %dnsbl_response%
-     * %sfp_ip_response%
-     * %btt_ip_response%
-     * %sfp_asn_response%
-     * %sfp_country_response%
      */
 
     private void loadDefaults() {
         map.put("autonomous system number kick",
-                "You have been kicked!\\nReason:\\nYour autonomous system number (ASN: %asn_response%) is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
+                "You have been kicked!\\nReason:\\nYour autonomous system number is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
         map.put("autonomous system number ban",
                 "You are banned!\\nReason:\\nYour autonomous system number is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
         map.put("internet protocol kick",
@@ -41,11 +36,11 @@ public class Messages {
         map.put("internet protocol ban",
                 "You are banned!\\nReason:\\nYour internet protocol is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
         map.put("domain name system based list kick",
-                "You have been kicked!\\nReason:\\nYou are domain name system based list (DNSBL: %dnsbl_response%) is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
+                "You have been kicked!\\nReason:\\nYou are domain name system based list (DNSBL: %player_ip%) is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
         map.put("domain name system based list ban",
                 "You are banned!\\nReason:\\nYou are domain name system based list blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
         map.put("country blacklist kick",
-                "You have been kicked!\\nReason:\\nYour country (COUNTRY: %country_response%) is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
+                "You have been kicked!\\nReason:\\nYour country is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
         map.put("country blacklist ban",
                 "You are banned!\\nReason:\\nYour country is blacklisted!\\nIf you think this is a issue, please contact us at www.example.com");
         map.put("player cache kick",

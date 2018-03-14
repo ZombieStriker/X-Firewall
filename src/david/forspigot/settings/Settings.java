@@ -36,14 +36,12 @@ public class Settings {
 
     public void write() {
         isProtectionEnabled();
-        isProtectionWhitelistEnabled();
         getProtectionWhitelistPlayTimeRequired();
         getProtectionDuration();
-        getProtectionInteral();
+        getProtectionInterval();
         getProtectionMaxConnections();
         isStopForumSpamProxyCheckEnabled();
         isStopForumSpamProxyCheckDatabaseEnabled();
-        isStopForumSpamGetDataOnlyOnce();
         isStopForumSpamProxyAdvancedIfFoundBan();
         isStopForumSpamProxyAdvancedLog();
         isStopForumSpamAsnCheckEnabled();
@@ -92,14 +90,6 @@ public class Settings {
         return customConfig.getBoolean(key);
     }
 
-    public boolean isProtectionWhitelistEnabled() {
-        String key = "protection.whitelist.enabled";
-        if (customConfig.get(key) == null) {
-            customConfig.set(key, true);
-        }
-        return customConfig.getBoolean(key);
-    }
-
     public int getProtectionWhitelistPlayTimeRequired() {
         String key = "protection.whitelist.required-play-time";
         if (customConfig.get(key) == null) {
@@ -116,7 +106,7 @@ public class Settings {
         return customConfig.getInt(key);
     }
 
-    public int getProtectionInteral() {
+    public int getProtectionInterval() {
         String key = "protection.interval";
         if (customConfig.get(key) == null) {
             customConfig.set(key, 400);
@@ -142,14 +132,6 @@ public class Settings {
 
     public boolean isStopForumSpamProxyCheckDatabaseEnabled() {
         String key = "stopforumspam.proxy.check-database";
-        if (customConfig.get(key) == null) {
-            customConfig.set(key, true);
-        }
-        return customConfig.getBoolean(key);
-    }
-
-    public boolean isStopForumSpamGetDataOnlyOnce() {
-        String key = "stopforumspam.advanced.get-data-only-once";
         if (customConfig.get(key) == null) {
             customConfig.set(key, true);
         }

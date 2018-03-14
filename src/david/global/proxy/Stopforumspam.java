@@ -97,12 +97,12 @@ public class Stopforumspam {
                     stream.forEach(downloadedProxies::add);
                     System.out.println("Test 4");
 
-                    if (zipFileExists) {
-                        zipFile.delete();
-                        System.out.println("Test 5");
-                    }
                 } catch (IOException e) {
                     e.printStackTrace();
+                }
+                if (zipFileExists) {
+                    zipFile.delete();
+                    System.out.println("Test 5");
                 }
             } else {
                 System.out.println("Test 1 (?)");
